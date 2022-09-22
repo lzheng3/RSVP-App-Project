@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZhengRSVP.Addevent">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Add event"  HorizontalOptions="CenterAndExpand" FontSize="Title" FontAttributes="Bold" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Event Hoster:" FontAttributes="Bold" FontSize="Small" Margin="5"
+                       Grid.Column="0" Grid.Row="0" />
+                <Entry Placeholder="" x:Name="person" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Event Name:" FontAttributes="Bold" FontSize="Small" Margin="5" 
+                       Grid.Column="1" Grid.Row="0"/>
+                <Entry Placeholder="" x:Name="eventName" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="Event location:" FontAttributes="Bold" FontSize="Small" Margin="5"
+                       Grid.Column="0" Grid.Row="3"/>
+                <Entry Placeholder="" x:Name="location" Grid.Column="0" Grid.Row="4"/>
+                <Label Text="Maximum  Attendees:" FontAttributes="Bold" FontSize="Small" Margin="5"
+                       Grid.Column="1" Grid.Row="3"/>
+                <Entry Placeholder="" x:Name="max" Grid.Column="1" Grid.Row="4"/>
+                <Label Text="Event date:" FontAttributes="Bold" FontSize="Small" Margin="5"
+                       Grid.Column="0" Grid.Row="5"/>
+                <DatePicker x:Name="eventDate" Grid.Column="0" Grid.Row="6"/>
+                <Label Text="Deadline to RSVP:" FontAttributes="Bold" FontSize="Small" Margin="5"
+                       Grid.Column="1" Grid.Row="5"/>
+                <DatePicker x:Name="deadline" Grid.Column="1" Grid.Row="6"/>
+                <Button Text="Save" x:Name="saveBtn" Clicked="saveBtn_Clicked" Grid.Column="0" Grid.Row="7"/>
+                <Button Text="Cancel" x:Name="cancelBtn" Clicked="cancelBtn_Clicked" Grid.Column="1" Grid.Row="7"/>
+            </Grid>
+            
+            <Label Text="" x:Name="errorMessage" Padding="10" FontSize="Medium" TextColor="Red" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

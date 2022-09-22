@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZhengRSVP.EventPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Events List" HorizontalOptions="CenterAndExpand" FontSize="Title" FontAttributes="Bold"/>
+
+            <ListView x:Name="lvEvent">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nameOfEvent}" Detail="{Binding info}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Next" x:Name="nextBtn2" Clicked="nextBtn2_Clicked" />
+            <Button Text="Add event" x:Name="addEventBtn" Clicked="addEventBtn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

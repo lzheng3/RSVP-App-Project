@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZhengRSVP.Adduser">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="User Registration" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" ></Label>
+            <Label Text="Name:" FontSize="Medium" Padding="10"/>
+            <Entry Placeholder="Please enter the name" x:Name="name"/>
+            <Label Text="E-Mail Address:" FontSize="Medium" Padding="10"/>
+            <Entry Placeholder="Please enter the email address" x:Name="email"/>
+            <Label Text="Password:" FontSize="Medium" Padding="10"/>
+            <Entry Placeholder="Please enter the password" x:Name="password" />
+            <Label Text="Phone Number:" FontSize="Medium" Padding="10"/>
+            <Entry Placeholder="Please the phone number" x:Name="phone"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Ok" x:Name="addUserBtn" Clicked="addUserBtn_Clicked" />
+                <Button Text="Cancel" Grid.Column="1"  x:Name="cancelBtn" Clicked="cancelBtn_Clicked"/>
+            </Grid>
+            
+            <Label Text="" x:Name="errorMessage" Padding="10" FontSize="Medium" TextColor="Red" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

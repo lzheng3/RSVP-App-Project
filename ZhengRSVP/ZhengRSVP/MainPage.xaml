@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZhengRSVP.MainPage">
+
+    <StackLayout>
+        <Label Text="Welcome to RSVP Project" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" ></Label>
+        <Label Text="Login" FontSize="Title" FontAttributes="Bold" Padding="10"></Label>
+        <Label Text="E-Mail Address" FontSize="Medium" Padding="10"/>
+        <Entry Placeholder="Enter your email address" x:Name="username"/>
+        <Label Text="Password:" FontSize="Medium" Padding="10"/>
+        <Entry Placeholder="Enter your password" x:Name="password" IsPassword="True"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="LOGIN" x:Name="loginBtn" Clicked="loginBtn_Clicked" BackgroundColor="LightBlue" Margin="10"/>
+            <Button Text="SIGN UP" Grid.Column="1"  x:Name="signBtn" Clicked="signButton_Clicked" BackgroundColor="Gray" Margin="10" TextColor="White"/>
+        </Grid>
+        <Label Text="" x:Name="errorMessage" Padding="10" FontSize="Medium" TextColor="Red" FontAttributes="Bold"/>
+    </StackLayout>
+
+</ContentPage>
